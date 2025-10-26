@@ -38,7 +38,7 @@ seaborn + matplotlib – Visualizations
 🚀 Getting Started
 1. Clone the Repository
 bash
-git clone https://github.com/yourusername/whatsapp-sentiment-analysis.git
+git clone (https://github.com/neverseentoday/Whatsapp-Setiment-Analysis.git)
 cd whatsapp-sentiment-analysis
 2. Setup Virtual Environment
 bash
@@ -131,4 +131,4 @@ You are free to use, modify, and distribute it with attribution.
 👨‍💻 Author
 Alvin
 AI & NLP Enthusiast
-📧 Contact: [your-email@example.com]
+📧 Contact: [iamalvinnjoseph@gmail.com]

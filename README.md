@@ -78,15 +78,7 @@ John,"Hey good morning!",positive,joy
 Me,"Feeling super excited!",positive,joy
 John,"I'm a bit nervous though.",negative,fear
 Me,"Don't worry everything will go great!",positive,trust
-📁 Project Structure
-text
-Whatsapp-Sentiment-Analysis/
-│
-├── data/                      # Chat exports go here (.txt or .csv)
-├── outputs/                   # CSV & visualizations
-├── main.py                    # Main Python script
-├── requirements.txt            # Dependencies
-└── README.md                  # Project documentation
+
 🧠 Key Concepts
 TextBlob: Determines message polarity & subjectivity.
 NRCLex: Maps words to eight primary emotions — joy, trust, fear, anger, sadness, disgust, surprise, anticipation.

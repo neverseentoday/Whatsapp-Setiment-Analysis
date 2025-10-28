@@ -1,156 +1,156 @@
-💬 WhatsApp Sentiment & Emotion Analyzer
-https://static.streamlit.io/badges/streamlit_badge_black_white.svg
-https://img.shields.io/badge/Python-3.8%252B-blue
-https://img.shields.io/badge/NLP-TextBlob%252BNRCLex-orange
-https://img.shields.io/badge/License-MIT-green
+🧠 WhatsApp Sentiment & Emotion Analyzer
 
-<div align="center">
-🔍 Uncover the Emotional Pulse of Your WhatsApp Conversations
-A powerful NLP-powered web application that analyzes sentiments and emotions in your WhatsApp chats through beautiful, interactive visualizations.
+Perform Sentiment Analysis and Emotion Detection on WhatsApp chat data using NLP, TextBlob, and NRCLex — uncovering how people express emotions in digital communication.
 
-👉 Live Demo · 🚀 Quick Start · 📊 Features
+📖 Overview
 
-</div>
+WhatsApp is one of the most widely used communication platforms — a goldmine for understanding human emotions and social interactions.
+This project transforms exported WhatsApp messages into emotional insights through advanced text analysis.
+
+It automatically identifies:
+
+🟢 Sentiment Polarity: Positive, Negative, or Neutral
+
+😊 Dominant Emotions: Joy, Anger, Fear, Trust, Sadness, etc.
+
+👥 Participant Insights: Mood trends, message frequency & engagement levels
+
+Using TextBlob for sentiment scoring and NRCLex for emotion detection, the system converts plain conversations into rich emotional analytics — with interactive visualizations and exportable reports.
+
 ✨ Features
+
 🎯 Core Analysis
-📊 Sentiment Analysis - Classify messages as Positive, Negative, or Neutral using TextBlob
 
-😊 Emotion Detection - Identify 10 different emotions (Joy, Anger, Fear, Trust, etc.) with NRCLex
+📊 Sentiment Analysis: Classify messages as Positive, Negative, or Neutral
 
-👥 Participant Analytics - Track engagement and emotional patterns for each group member
+😊 Emotion Detection: Identify up to 10 emotions (Joy, Anger, Fear, Trust, Anticipation, etc.)
 
-📈 Interactive Visualizations - Beautiful charts and graphs for easy insights
+👥 Participant Analytics: Track engagement and mood variations per user
+
+📈 Interactive Visualizations: Sentiment charts, emotion heatmaps, and user comparisons
 
 🎨 Visual Dashboard
+
 Real-time sentiment distribution
 
-Emotion heatmaps and trends
-
-Participant comparison charts
+Emotion trends and participant comparisons
 
 Downloadable analysis reports
 
-🚀 Tech Stack
-Frontend: Streamlit 🎈
+🧩 Tech Stack
 
-NLP: TextBlob + NRCLex 🧠
+Language: Python 3.10+
 
-Visualization: Matplotlib + Seaborn 📊
+Libraries Used:
 
-Data Processing: Pandas 🐼
+🐼 pandas – Data processing
 
-🎯 Live Demo
-👉 Try the Live App Now
+🧠 textblob – Sentiment analysis (polarity & subjectivity)
 
-Simply upload your WhatsApp export and get instant insights! No registration required.
+💬 nrclex – Emotion detection
 
-🛠️ Quick Start
-1. Clone & Setup
-bash
-git clone https://github.com/neverseentoday/whatsapp-sentimental-analysis.git
-cd whatsapp-sentimental-analysis
+😄 emoji – Emoji preprocessing
+
+📊 matplotlib + seaborn – Visualizations
+
+🎈 (Optional) Streamlit – Interactive dashboard interface
+
+🚀 Getting Started
+1️⃣ Clone the Repository
+git clone https://github.com/neverseentoday/Whatsapp-Sentiment-Analysis.git
+cd whatsapp-sentiment-analysis
+
+2️⃣ Setup Virtual Environment
+python -m venv venv
+venv\Scripts\activate    # Windows
+source venv/bin/activate # Mac/Linux
+
+3️⃣ Install Dependencies
 pip install -r requirements.txt
-2. Run Locally
-bash
-streamlit run app.py
-3. Export Your WhatsApp Data
-Open WhatsApp → Select Chat → ⋮ Menu → Export Chat
+python -m textblob.download_corpora
 
-Choose "Without Media"
+4️⃣ Add WhatsApp Chat File
 
-Upload the .txt file to the app
+Export any chat from WhatsApp:
 
-🔧 How It Works
-🧠 NLP Pipeline
-Data Extraction - Parse WhatsApp export format with regex
+Open Chat → ⋮ Menu → Export Chat → Choose “Without Media”
 
-Text Preprocessing - Clean and normalize messages, handle emojis
+Place the exported .txt or .csv file in the data/ folder (e.g., data/chat.txt).
 
-Sentiment Analysis - TextBlob for polarity scoring (-1 to +1)
+Example format:
 
-Emotion Detection - NRCLex for emotional classification
+12/07/2025, 09:31 - Me: Feeling excited for the trip tomorrow.
+12/07/2025, 09:33 - John: I’m a bit nervous about the weather.
 
-Visualization - Interactive charts and metrics dashboard
+5️⃣ Run the Project
+python main.py
 
-📊 Analysis Metrics
-Sentiment Scores: Polarity (-1 to +1) and Subjectivity (0 to 1)
+📊 Output
 
-Emotion Spectrum: Fear, Anger, Anticipation, Trust, Surprise, Positive, Negative, Sadness, Disgust, Joy
+CSV Report:
 
-Participant Insights: Message frequency, emotional patterns, engagement levels
+outputs/whatsapp_sentiment_emotion_results.csv
 
-🎯 Use Cases
-👥 For Group Chats
-Understand group dynamics and emotional tone
 
-Identify most positive/negative contributors
+Visuals Generated:
 
-Track emotional trends over time
+Sentiment Distribution (Positive / Negative / Neutral)
 
-👤 For Personal Analysis
-Reflect on your communication style
+Emotion Spectrum (Joy, Fear, Anger, Trust, Sadness, etc.)
 
-Monitor your emotional patterns
+Example Result:
 
-Improve digital wellbeing
+Sender	Message	Sentiment	Dominant_Emotion
+John	Hey good morning!	Positive	Joy
+Me	Feeling super excited!	Positive	Joy
+John	I'm a bit nervous though.	Negative	Fear
+Me	Don't worry everything will go great!	Positive	Trust
+🧠 How It Works
+🔧 NLP Pipeline
 
-🔬 For Researchers
-Analyze conversation patterns
+Data Extraction: Parse WhatsApp export format using regex.
 
-Study emotional contagion in groups
+Text Preprocessing: Clean text, remove links, emojis, and special characters.
 
-Linguistic analysis of digital communication
+Sentiment Analysis: Compute polarity & subjectivity with TextBlob.
 
-🌟 Example Insights
-python
-📊 Total Messages: 1,247
-👥 Participants: 8
-😊 Positive Sentiment: 42.3%
-😐 Neutral Sentiment: 38.1%
-😞 Negative Sentiment: 19.6%
+Emotion Detection: Classify emotions using NRCLex lexicon.
 
-Top Emotions:
-1. Trust (23.4%)
-2. Joy (18.7%) 
-3. Anticipation (15.2%)
-📸 Preview
-Feature	Description
-Sentiment Analysis	Pie charts showing positive/negative/neutral distribution
-Emotion Dashboard	Bar charts displaying dominant emotions across conversations
-Participant Analytics	Comparison of message counts and sentiment by user
-Export Results	Download comprehensive analysis as CSV
+Visualization: Display charts and metrics using Matplotlib & Seaborn.
+
+💡 Use Cases
+
+👥 Group Analysis: Understand group dynamics and emotional tone.
+👤 Personal Reflection: Track your communication mood and positivity.
+📊 Research: Study emotional contagion, tone, and language trends in social conversations.
+💬 Business/Support: Monitor sentiment in customer communications.
+
+🧪 Future Enhancements
+
+🚀 Integrate BERT/RoBERTa for deeper emotion classification
+🎈 Add Streamlit Dashboard for real-time interaction
+🧩 Include emoji-based emotion weighting
+📉 Enable cross-user emotion comparison analytics
+
 🤝 Contributing
-We love contributions! Feel free to:
 
-🐛 Report bugs and issues
+We welcome all contributions!
 
-💡 Suggest new features
+🐛 Report bugs or suggest features
 
 🔧 Submit pull requests
 
 📚 Improve documentation
 
-Check out our Issues page to get started.
+Check the Issues
+ page to get started.
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+📜 License
 
-🙏 Acknowledgments
-TextBlob - For sentiment analysis capabilities
+This project is licensed under the MIT License — you’re free to use, modify, and distribute it with proper attribution.
 
-NRCLex - For emotion detection using the NRC Emotion Lexicon
+👨‍💻 Author
 
-Streamlit - For making web app development incredibly simple
-
-WhatsApp - For providing chat export functionality
-
-
-
-<div align="center">
-Ready to explore the emotions behind your conversations? 🚀
-https://static.streamlit.io/badges/streamlit_badge_black_white.svg
-https://img.shields.io/github/stars/neverseentoday/Whatsapp-Sentimental-Analysis?style=social
-
-Unlock the hidden emotional patterns in your WhatsApp chats today!
-
-</div>
+Alvin Joseph
+AI & NLP Enthusiast
+📧 iamalvinnjoseph@gmail.com
